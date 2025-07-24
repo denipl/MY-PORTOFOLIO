@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="style.css" />
 
     <script>
-      // Konfigurasi Tailwind CSS untuk kustomisasi
       tailwind.config = {
         theme: {
           extend: {
@@ -143,69 +142,185 @@
 
       <section id="skills" class="py-20">
         <div class="container mx-auto px-6 text-center">
-          <h2 class="text-3xl md:text-4xl font-bold text-primary mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-primary mb-16">
             Keahlian Saya
           </h2>
-          <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
-            <div
-              class="flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow transform hover:-translate-y-2"
-            >
-              <img
-                src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg"
-                alt="HTML5"
-                class="h-16 w-16 mb-2"
-              />
-              <p class="font-semibold">HTML</p>
+
+          <div class="mb-16">
+            <h3 class="text-2xl font-semibold text-textcolor mb-8">
+              Bahasa Pemrograman
+            </h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+              <div
+                class="skill-item bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+                style="transition-delay: 100ms"
+              >
+                <img
+                  src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg"
+                  alt="HTML5"
+                  class="h-16 w-16 mx-auto mb-4"
+                />
+                <h4 class="font-bold text-lg mb-2">HTML</h4>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                  <div
+                    class="bg-primary h-2.5 rounded-full"
+                    style="width: 95%"
+                  ></div>
+                </div>
+                <p class="text-sm text-gray-500 mt-2">Mahir</p>
+              </div>
+              <div
+                class="skill-item bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+                style="transition-delay: 200ms"
+              >
+                <img
+                  src="https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg"
+                  alt="CSS3"
+                  class="h-16 w-16 mx-auto mb-4"
+                />
+                <h4 class="font-bold text-lg mb-2">CSS</h4>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                  <div
+                    class="bg-primary h-2.5 rounded-full"
+                    style="width: 90%"
+                  ></div>
+                </div>
+                <p class="text-sm text-gray-500 mt-2">Mahir</p>
+              </div>
+              <div
+                class="skill-item bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+                style="transition-delay: 300ms"
+              >
+                <img
+                  src="https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg"
+                  alt="JavaScript"
+                  class="h-16 w-16 mx-auto mb-4"
+                />
+                <h4 class="font-bold text-lg mb-2">JavaScript</h4>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                  <div
+                    class="bg-primary h-2.5 rounded-full"
+                    style="width: 90%"
+                  ></div>
+                </div>
+                <p class="text-sm text-gray-500 mt-2">Mahir</p>
+              </div>
+              <div
+                class="skill-item bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+                style="transition-delay: 400ms"
+              >
+                <img
+                  src="https://www.vectorlogo.zone/logos/php/php-icon.svg"
+                  alt="PHP"
+                  class="h-16 w-16 mx-auto mb-4"
+                />
+                <h4 class="font-bold text-lg mb-2">PHP</h4>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                  <div
+                    class="bg-primary h-2.5 rounded-full"
+                    style="width: 85%"
+                  ></div>
+                </div>
+                <p class="text-sm text-gray-500 mt-2">Mahir</p>
+              </div>
+              <div
+                class="skill-item bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+                style="transition-delay: 500ms"
+              >
+                <img
+                  src="https://www.vectorlogo.zone/logos/python/python-icon.svg"
+                  alt="Python"
+                  class="h-16 w-16 mx-auto mb-4"
+                />
+                <h4 class="font-bold text-lg mb-2">Python</h4>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                  <div
+                    class="bg-primary h-2.5 rounded-full"
+                    style="width: 70%"
+                  ></div>
+                </div>
+                <p class="text-sm text-gray-500 mt-2">Menengah</p>
+              </div>
+              <div
+                class="skill-item bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+                style="transition-delay: 600ms"
+              >
+                <img
+                  src="https://www.vectorlogo.zone/logos/golang/golang-icon.svg"
+                  alt="Golang"
+                  class="h-16 w-16 mx-auto mb-4"
+                />
+                <h4 class="font-bold text-lg mb-2">Go</h4>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                  <div
+                    class="bg-primary h-2.5 rounded-full"
+                    style="width: 40%"
+                  ></div>
+                </div>
+                <p class="text-sm text-gray-500 mt-2">Dasar</p>
+              </div>
             </div>
-            <div
-              class="flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow transform hover:-translate-y-2"
-            >
-              <img
-                src="https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg"
-                alt="CSS3"
-                class="h-16 w-16 mb-2"
-              />
-              <p class="font-semibold">CSS</p>
-            </div>
-            <div
-              class="flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow transform hover:-translate-y-2"
-            >
-              <img
-                src="https://www.vectorlogo.zone/logos/php/php-icon.svg"
-                alt="PHP"
-                class="h-16 w-16 mb-2"
-              />
-              <p class="font-semibold">PHP</p>
-            </div>
-            <div
-              class="flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow transform hover:-translate-y-2"
-            >
-              <img
-                src="https://www.vectorlogo.zone/logos/python/python-icon.svg"
-                alt="Python"
-                class="h-16 w-16 mb-2"
-              />
-              <p class="font-semibold">Python</p>
-            </div>
-            <div
-              class="flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow transform hover:-translate-y-2"
-            >
-              <img
-                src="https://www.vectorlogo.zone/logos/laravel/laravel-icon.svg"
-                alt="Laravel"
-                class="h-16 w-16 mb-2"
-              />
-              <p class="font-semibold">Laravel</p>
-            </div>
-            <div
-              class="flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow transform hover:-translate-y-2"
-            >
-              <img
-                src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg"
-                alt="React"
-                class="h-16 w-16 mb-2"
-              />
-              <p class="font-semibold">React</p>
+          </div>
+
+          <div>
+            <h3 class="text-2xl font-semibold text-textcolor mb-8">
+              Framework & Teknologi
+            </h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+              <div
+                class="skill-item bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+                style="transition-delay: 100ms"
+              >
+                <img
+                  src="https://www.vectorlogo.zone/logos/laravel/laravel-icon.svg"
+                  alt="Laravel"
+                  class="h-16 w-16 mx-auto mb-4"
+                />
+                <h4 class="font-bold text-lg mb-2">Laravel</h4>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                  <div
+                    class="bg-primary h-2.5 rounded-full"
+                    style="width: 90%"
+                  ></div>
+                </div>
+                <p class="text-sm text-gray-500 mt-2">Mahir</p>
+              </div>
+              <div
+                class="skill-item bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+                style="transition-delay: 200ms"
+              >
+                <img
+                  src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg"
+                  alt="Node.js"
+                  class="h-16 w-16 mx-auto mb-4"
+                />
+                <h4 class="font-bold text-lg mb-2">Node.js</h4>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                  <div
+                    class="bg-primary h-2.5 rounded-full"
+                    style="width: 75%"
+                  ></div>
+                </div>
+                <p class="text-sm text-gray-500 mt-2">Menengah</p>
+              </div>
+              <div
+                class="skill-item bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+                style="transition-delay: 300ms"
+              >
+                <img
+                  src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg"
+                  alt="React"
+                  class="h-16 w-16 mx-auto mb-4"
+                />
+                <h4 class="font-bold text-lg mb-2">React</h4>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                  <div
+                    class="bg-primary h-2.5 rounded-full"
+                    style="width: 65%"
+                  ></div>
+                </div>
+                <p class="text-sm text-gray-500 mt-2">Menengah</p>
+              </div>
             </div>
           </div>
         </div>
@@ -228,8 +343,8 @@
               <div class="p-6 flex-grow flex flex-col">
                 <h3 class="text-xl font-bold text-primary mb-2">Booking Web</h3>
                 <p class="text-gray-600 mb-4 flex-grow">
-                  Saya dan teman saya membuat sebuah web yang dibangun dengan
-                  Laravel untuk manajemen jadwal dan booking lapangan.
+                  Web manajemen jadwal dan booking lapangan dibangun dengan
+                  Laravel.
                 </p>
                 <a
                   href="https://github.com/Zivalez/sistem-booking-lapangan.git"
@@ -252,8 +367,8 @@
                   Dasboard Admin
                 </h3>
                 <p class="text-gray-600 mb-4 flex-grow">
-                  Saya membuat web dashboard admin sederhana berbasis Laravel
-                  dengan fitur manajemen user, produk, dan lainnya.
+                  Dashboard admin sederhana berbasis Laravel untuk manajemen
+                  konten.
                 </p>
                 <a
                   href="https://github.com/denipl/LARAVEL-DASHBOARD-ADMIN-SIMPEL.git"
@@ -276,8 +391,8 @@
                   Aplikasi Image Noise
                 </h3>
                 <p class="text-gray-600 mb-4 flex-grow">
-                  Proyek skrip Python untuk menambahkan noise pada gambar dan
-                  melakukan filtering menggunakan Gaussian filter.
+                  Skrip Python untuk manipulasi gambar, menambahkan noise dan
+                  filtering.
                 </p>
                 <a
                   href="https://github.com/denipl/APLIKASI-IMAGE-NOICE.git"
@@ -310,8 +425,7 @@
                   Introduction to Cloud and Artificial Intelligence
                 </h3>
                 <p class="text-gray-600 mb-4 flex-grow">
-                  Pelatihan dari Digital Entrepreneurship Academy (DEA) dalam
-                  program Digital Talent Scholarship 2024.
+                  Pelatihan dari Digital Entrepreneurship Academy (DEA).
                 </p>
                 <a
                   href="Sertifikat/Sertifikat_DHENY PUJI LAKSONO_Introduction to Cloud and Artificial Intelligence Applications for Digital Business.pdf"
@@ -334,8 +448,7 @@
                   Digital Talent Scholarship, Microcredential
                 </h3>
                 <p class="text-gray-600 mb-4 flex-grow">
-                  Sertifikasi dari Puslitbang SDP3I yang mencakup AI, Cloud,
-                  Machine Learning, Generative AI, Gemini, dan MLOps.
+                  Sertifikasi dari Puslitbang SDP3I.
                 </p>
                 <a
                   href="Sertifikat/DHENY PUJI LAKSONO - 1969555850-299 (2).pdf"
@@ -358,8 +471,7 @@
                   Programming Essentials in Python
                 </h3>
                 <p class="text-gray-600 mb-4 flex-grow">
-                  Sertifikasi dari Cisco Networking Academy yang mencakup
-                  keahlian dasar hingga menengah dalam pemrograman Python.
+                  Sertifikasi dari Cisco Networking Academy.
                 </p>
                 <a
                   href="Sertifikat/Partner-_PCAP_-_Programming_Essentials_in_Python_certificate_denipuji028-gmail-com_8eeed6e9-5845-4fe1-a4a4-4c34d84c2016.pdf"
@@ -382,8 +494,7 @@
                   MikroTik Certified Network Associate
                 </h3>
                 <p class="text-gray-600 mb-4 flex-grow">
-                  Sertifikasi fundamental untuk mengelola dan mengoperasikan
-                  perangkat jaringan MikroTik.
+                  Sertifikasi fundamental dari MikroTik.
                 </p>
                 <a
                   href="Sertifikat/sertifat.pdf"
@@ -407,10 +518,9 @@
           </p>
           <a
             href="https://www.linkedin.com/in/dheny-pujilaksono-73b42020b/"
-            target="_blank"
             class="inline-block bg-primary text-white font-semibold py-3 px-8 rounded-md hover:bg-primary-dark transition-all duration-300 transform hover:-translate-y-1"
           >
-            LinkedIn
+            linkedin
           </a>
         </div>
       </section>

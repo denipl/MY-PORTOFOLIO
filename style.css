@@ -1,27 +1,27 @@
 /*
-  File ini hanya digunakan untuk animasi "fade-in" pada kartu proyek
-  yang dikontrol oleh script.js. Semua styling lainnya sudah di-handle
-  oleh kelas utilitas Tailwind di file HTML.
+  File ini digunakan untuk animasi "fade-in" pada kartu proyek dan ikon keahlian
+  yang dikontrol oleh script.js. Semua styling lainnya di-handle oleh Tailwind.
 */
 
-.project-card {
+/* Aturan untuk kondisi awal sebelum animasi */
+.project-card,
+.skill-item {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
-.project-card.visible {
+/* Aturan untuk kondisi akhir setelah elemen terlihat */
+.project-card.visible,
+.skill-item.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Memberikan efek transisi dan hover tambahan yang lebih mudah di-handle 
-  di CSS untuk konsistensi. Anda juga bisa menambahkan kelas-kelas
-  Tailwind `transition duration-300 hover:-translate-y-2 hover:shadow-xl` 
-  langsung di HTML pada setiap .project-card jika lebih suka.
-*/
+/* Efek hover tambahan untuk kartu proyek */
 .project-card {
-  transition: transform 0.3s, box-shadow 0.3s, opacity 0.5s, transform 0.5s;
+  transition-property: transform, box-shadow, opacity;
+  transition-duration: 0.3s, 0.3s, 0.5s;
 }
 
 .project-card:hover {
