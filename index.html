@@ -1,122 +1,425 @@
 <!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DHENY | Portofolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
 
+    <script>
+      // Konfigurasi Tailwind CSS untuk kustomisasi
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#007BFF",
+              "primary-dark": "#0056b3",
+              secondary: "#6c757d",
+              background: "#f8f9fa",
+              textcolor: "#343a40",
+            },
+            fontFamily: {
+              sans: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-background text-textcolor leading-relaxed">
     <header>
-        <nav class="navbar">
-            <a href="#home" class="nav-logo">DHENY</a>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="#about" class="nav-link">Tentang</a></li>
-                <li class="nav-item"><a href="#projects" class="nav-link">Proyek</a></li>
-                <li class="nav-item"><a href="#sertifikat" class="nav-link">Sertifikat</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link">Kontak</a></li>
-            </ul>
-        </nav>
+      <nav
+        class="navbar fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-sm shadow-md transition-colors duration-300"
+      >
+        <div
+          class="container mx-auto px-6 flex justify-between items-center py-4"
+        >
+          <a href="#home" class="text-2xl font-bold text-primary">DHENY</a>
+          <ul class="hidden md:flex space-x-8">
+            <li>
+              <a
+                href="#about"
+                class="font-medium text-textcolor hover:text-primary transition-colors"
+                >Tentang</a
+              >
+            </li>
+            <li>
+              <a
+                href="#skills"
+                class="font-medium text-textcolor hover:text-primary transition-colors"
+                >Keahlian</a
+              >
+            </li>
+            <li>
+              <a
+                href="#projects"
+                class="font-medium text-textcolor hover:text-primary transition-colors"
+                >Proyek</a
+              >
+            </li>
+            <li>
+              <a
+                href="#sertifikat"
+                class="font-medium text-textcolor hover:text-primary transition-colors"
+                >Sertifikat</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="font-medium text-textcolor hover:text-primary transition-colors"
+                >Kontak</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1>Halo, Saya Dheny Pujilaksono</h1>
-                <p>Seorang Web Developer yang bersemangat.</p>
-                <a href="#projects" class="cta-button">Lihat Karya Saya</a>
-            </div>
-        </section>
+    <main class="pt-20">
+      <section
+        id="home"
+        class="h-[90vh] bg-cover bg-center bg-no-repeat"
+        style="
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.5),
+              rgba(0, 0, 0, 0.5)
+            ),
+            url('img/IMG_9217.jpg');
+        "
+      >
+        <div
+          class="h-full flex flex-col justify-center items-center text-center text-white px-4"
+        >
+          <h1 class="text-4xl md:text-6xl font-bold mb-2">
+            Halo, Saya Dheny Pujilaksono
+          </h1>
+          <p class="text-lg md:text-2xl font-light">
+            Seorang Web Developer yang bersemangat.
+          </p>
+          <a
+            href="#projects"
+            class="mt-6 inline-block bg-primary text-white font-semibold py-3 px-8 rounded-md hover:bg-primary-dark transition-all duration-300 transform hover:-translate-y-1"
+          >
+            Lihat Karya Saya
+          </a>
+        </div>
+      </section>
 
-        <section id="about" class="content-section">
-            <div class="container">
-                <h2>Tentang Saya</h2>
-                <div class="about-content">
-                    <img src="img/3  x 4.jpg" alt="Foto Profil Anda" class="profile-pic">
-                    <p>
-                        Selamat datang di portofolio saya! Saya adalah seorang pengembang web dengan keahlian di bidang front-end dan back-end. Saya suka menciptakan aplikasi web yang fungsional, menarik, dan memberikan pengalaman pengguna yang baik.
-                        <br><br>
-                        Keahlian saya meliputi HTML, CSS, JavaScript, Python, PHP serta framework modern seperti React,Node.js dan Laravel. Saya selalu antusias untuk belajar teknologi baru dan menghadapi tantangan.
-                    </p>
-                </div>
+      <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-primary mb-12">
+            Tentang Saya
+          </h2>
+          <div class="flex flex-col md:flex-row items-center gap-10 text-left">
+            <img
+              src="img/3  x 4.jpg"
+              alt="Foto Profil"
+              class="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover border-4 border-primary shadow-lg"
+            />
+            <div class="flex-1">
+              <p class="mb-4">
+                Selamat datang di portofolio saya! Saya adalah seorang
+                pengembang web dengan keahlian di bidang front-end dan back-end.
+                Saya suka menciptakan aplikasi web yang fungsional, menarik, dan
+                memberikan pengalaman pengguna yang baik.
+              </p>
+              <p>
+                Keahlian saya meliputi HTML, CSS, JavaScript, Python, PHP serta
+                framework modern seperti React, Node.js dan Laravel. Saya selalu
+                antusias untuk belajar teknologi baru dan menghadapi tantangan.
+              </p>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <section id="projects" class="content-section">
-            <div class="container">
-                <h2>Proyek Saya</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <img src="img/Screenshot 2025-07-01 135004.png" alt="Gambar Proyek 1">
-                        <h3>Booking Web </h3>
-                        <p> Saya dan teman saya membuat sebuah web yang dibangun dengan Laravel untuk manajemen jadwal dan booking lapangan. Aplikasi ini dirancang dengan arsitektur modern menggunakan CSS Grid untuk menyajikan jadwal yang dinamis, fleksibel.</p>
-                        <a href="https://github.com/Zivalez/sistem-booking-lapangan.git" target="_blank" class="project-link">Lihat Proyek</a>
-                    </div>
-                    <div class="project-card">
-                        <img src="img/Screenshot 2025-07-06 131359.png" alt="Gambar Proyek 2">
-                        <h3>Dasboard Admin</h3>
-                        <p>Saya membuat web dashboard admin sederhana berbasis Laravel. Web ini sangat minimalis dan simpel dengan fitur manajemen user, kategori, produk, dan laporan.</p>
-                        <a href="https://github.com/denipl/LARAVEL-DASHBOARD-ADMIN-SIMPEL.git" target="_blank" class="project-link">Lihat Proyek</a>
-                    </div>
-                    <div class="project-card">
-                        <img src="img/python-logo-master-v3-TM.png" alt="Gambar Proyek 3">
-                        <h3>Aplikasi Image Noice</h3>
-                        <p>Proyek ini berisi skrip Python untuk menambahkan noise (Gaussian dan Salt & Pepper) pada gambar serta melakukan filtering menggunakan Gaussian filter.</p>
-                        <a href="https://github.com/denipl/APLIKASI-IMAGE-NOICE.git" target="_blank" class="project-link">Lihat Proyek</a>
-                    </div>
-                </div>
+      <section id="skills" class="py-20">
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-primary mb-12">
+            Keahlian Saya
+          </h2>
+          <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
+            <div
+              class="flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow transform hover:-translate-y-2"
+            >
+              <img
+                src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg"
+                alt="HTML5"
+                class="h-16 w-16 mb-2"
+              />
+              <p class="font-semibold">HTML</p>
             </div>
-        </section>
+            <div
+              class="flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow transform hover:-translate-y-2"
+            >
+              <img
+                src="https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg"
+                alt="CSS3"
+                class="h-16 w-16 mb-2"
+              />
+              <p class="font-semibold">CSS</p>
+            </div>
+            <div
+              class="flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow transform hover:-translate-y-2"
+            >
+              <img
+                src="https://www.vectorlogo.zone/logos/php/php-icon.svg"
+                alt="PHP"
+                class="h-16 w-16 mb-2"
+              />
+              <p class="font-semibold">PHP</p>
+            </div>
+            <div
+              class="flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow transform hover:-translate-y-2"
+            >
+              <img
+                src="https://www.vectorlogo.zone/logos/python/python-icon.svg"
+                alt="Python"
+                class="h-16 w-16 mb-2"
+              />
+              <p class="font-semibold">Python</p>
+            </div>
+            <div
+              class="flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow transform hover:-translate-y-2"
+            >
+              <img
+                src="https://www.vectorlogo.zone/logos/laravel/laravel-icon.svg"
+                alt="Laravel"
+                class="h-16 w-16 mb-2"
+              />
+              <p class="font-semibold">Laravel</p>
+            </div>
+            <div
+              class="flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow transform hover:-translate-y-2"
+            >
+              <img
+                src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg"
+                alt="React"
+                class="h-16 w-16 mb-2"
+              />
+              <p class="font-semibold">React</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <section id="sertifikat" class="content-section">
-            <div class="container">
-                <h2>Sertifikat Kompetensi</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <img src="img/Screenshot 2025-07-09 140038.png" alt="Gambar Sertifikat 1">
-                        <h3>Introduction to Cloud and Artificial Intelligence Applications for Digital Business</h3>
-                        <p> Introduction to Cloud and Artificial Intelligence Applications for Digital Business". Pelatihan ini merupakan bagian dari program Digital Entrepreneurship Academy (DEA) dalam skema Digital Talent Scholarship 2024</p>
-                        <a href="Sertifikat/Sertifikat_DHENY PUJI LAKSONO_Introduction to Cloud and Artificial Intelligence Applications for Digital Business.pdf" target="_blank" class="project-link">Lihat Detail</a>
-                    </div>
-                    <div class="project-card">
-                        <img src="img/Screenshot 2025-07-09 140201.png" alt="Gambar Sertifikat 2">
-                        <h3>Digital Talent Scholarship, Microcredential – Startup Foundation</h3>
-                        <p>Sertifikat ini ditandatangani di Jakarta pada 10 Desember 2024 oleh Dr. Nusirwan, S.Ag, M.Si, selaku Kepala Puslitbang SDP3I. Lampiran pada dokumen merinci topik-topik perkuliahan yang mencakup pengenalan AI, Cloud, berbagai model Machine Learning, Generative AI, Gemini, dan MLOps. Keaslian sertifikat ini dapat divalidasi secara online melalui situs Digitalent Kominfo.</p>
-                        <a href="Sertifikat/DHENY PUJI LAKSONO - 1969555850-299 (2).pdf" target="_blank" class="project-link">Lihat Detail</a>
-                    </div>
-                    <div class="project-card">
-                        <img src="img/Screenshot 2025-07-09 140241.png" alt="Gambar Sertifikat 2">
-                        <h3>Programming Essentials in Python</h3>
-                        <p>Cisco Networking Academy yang fokus pada dasar-dasar pemrograman menggunakan bahasa Python. Kursus ini dirancang untuk membekali pesertanya dengan keahlian yang kuat dari tingkat dasar hingga menengah dalam Python.</p>
-                        <a href="Sertifikat/Partner-_PCAP_-_Programming_Essentials_in_Python_certificate_denipuji028-gmail-com_8eeed6e9-5845-4fe1-a4a4-4c34d84c2016.pdf"_blank" class="project-link">Lihat Detail</a>
-                    </div>
-                    <div class="project-card">
-                        <img src="img/Screenshot 2025-07-09 140517.png" alt="Gambar Sertifikat 2">
-                        <h3>MikroTik</h3>
-                        <p> diperlukan untuk mengelola dan mengoperasikan perangkat jaringan dari MikroTik. MTCNA adalah sertifikasi tingkat pertama dan paling fundamental dalam jalur sertifikasi MikroTik, yang berfungsi sebagai gerbang utama sebelum mengambil spesialisasi lebih lanjut</p>
-                        <a href="Sertifikat/sertifat.pdf"_blank" class="project-link">Lihat Detail</a>
-                    </div>
-                    </div>
+      <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-primary mb-12">
+            Proyek Saya
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="project-card bg-white rounded-lg shadow-lg overflow-hidden flex flex-col"
+            >
+              <img
+                src="img/Screenshot 2025-07-01 135004.png"
+                alt="Booking Web"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6 flex-grow flex flex-col">
+                <h3 class="text-xl font-bold text-primary mb-2">Booking Web</h3>
+                <p class="text-gray-600 mb-4 flex-grow">
+                  Saya dan teman saya membuat sebuah web yang dibangun dengan
+                  Laravel untuk manajemen jadwal dan booking lapangan.
+                </p>
+                <a
+                  href="https://github.com/Zivalez/sistem-booking-lapangan.git"
+                  target="_blank"
+                  class="self-start mt-auto bg-primary text-white font-semibold py-2 px-6 rounded-md hover:bg-primary-dark transition-colors"
+                  >Lihat Proyek</a
+                >
+              </div>
             </div>
-        </section>
+            <div
+              class="project-card bg-white rounded-lg shadow-lg overflow-hidden flex flex-col"
+            >
+              <img
+                src="img/Screenshot 2025-07-06 131359.png"
+                alt="Dashboard Admin"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6 flex-grow flex flex-col">
+                <h3 class="text-xl font-bold text-primary mb-2">
+                  Dasboard Admin
+                </h3>
+                <p class="text-gray-600 mb-4 flex-grow">
+                  Saya membuat web dashboard admin sederhana berbasis Laravel
+                  dengan fitur manajemen user, produk, dan lainnya.
+                </p>
+                <a
+                  href="https://github.com/denipl/LARAVEL-DASHBOARD-ADMIN-SIMPEL.git"
+                  target="_blank"
+                  class="self-start mt-auto bg-primary text-white font-semibold py-2 px-6 rounded-md hover:bg-primary-dark transition-colors"
+                  >Lihat Proyek</a
+                >
+              </div>
+            </div>
+            <div
+              class="project-card bg-white rounded-lg shadow-lg overflow-hidden flex flex-col"
+            >
+              <img
+                src="img/python-logo-master-v3-TM.png"
+                alt="Aplikasi Image Noise"
+                class="w-full h-48 object-contain p-4"
+              />
+              <div class="p-6 flex-grow flex flex-col">
+                <h3 class="text-xl font-bold text-primary mb-2">
+                  Aplikasi Image Noise
+                </h3>
+                <p class="text-gray-600 mb-4 flex-grow">
+                  Proyek skrip Python untuk menambahkan noise pada gambar dan
+                  melakukan filtering menggunakan Gaussian filter.
+                </p>
+                <a
+                  href="https://github.com/denipl/APLIKASI-IMAGE-NOICE.git"
+                  target="_blank"
+                  class="self-start mt-auto bg-primary text-white font-semibold py-2 px-6 rounded-md hover:bg-primary-dark transition-colors"
+                  >Lihat Proyek</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <section id="contact" class="content-section">
-            <div class="container">
-                <h2>Hubungi Saya</h2>
-                <p>Tertarik untuk bekerja sama? Jangan ragu untuk menghubungi saya!</p>
-                <a href="https://www.linkedin.com/in/dheny-pujilaksono-73b42020b/" class="cta-button">LinkedIn</a>
+      <section id="sertifikat" class="py-20">
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-primary mb-12">
+            Sertifikat Kompetensi
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <div
+              class="project-card bg-white rounded-lg shadow-lg overflow-hidden flex flex-col"
+            >
+              <img
+                src="img/Screenshot 2025-07-09 140038.png"
+                alt="Sertifikat Cloud & AI"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6 flex-grow flex flex-col">
+                <h3 class="text-xl font-bold text-primary mb-2">
+                  Introduction to Cloud and Artificial Intelligence
+                </h3>
+                <p class="text-gray-600 mb-4 flex-grow">
+                  Pelatihan dari Digital Entrepreneurship Academy (DEA) dalam
+                  program Digital Talent Scholarship 2024.
+                </p>
+                <a
+                  href="Sertifikat/Sertifikat_DHENY PUJI LAKSONO_Introduction to Cloud and Artificial Intelligence Applications for Digital Business.pdf"
+                  target="_blank"
+                  class="self-start mt-auto bg-primary text-white font-semibold py-2 px-6 rounded-md hover:bg-primary-dark transition-colors"
+                  >Lihat Detail</a
+                >
+              </div>
             </div>
-        </section>
+            <div
+              class="project-card bg-white rounded-lg shadow-lg overflow-hidden flex flex-col"
+            >
+              <img
+                src="img/Screenshot 2025-07-09 140201.png"
+                alt="Sertifikat Microcredential"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6 flex-grow flex flex-col">
+                <h3 class="text-xl font-bold text-primary mb-2">
+                  Digital Talent Scholarship, Microcredential
+                </h3>
+                <p class="text-gray-600 mb-4 flex-grow">
+                  Sertifikasi dari Puslitbang SDP3I yang mencakup AI, Cloud,
+                  Machine Learning, Generative AI, Gemini, dan MLOps.
+                </p>
+                <a
+                  href="Sertifikat/DHENY PUJI LAKSONO - 1969555850-299 (2).pdf"
+                  target="_blank"
+                  class="self-start mt-auto bg-primary text-white font-semibold py-2 px-6 rounded-md hover:bg-primary-dark transition-colors"
+                  >Lihat Detail</a
+                >
+              </div>
+            </div>
+            <div
+              class="project-card bg-white rounded-lg shadow-lg overflow-hidden flex flex-col"
+            >
+              <img
+                src="img/Screenshot 2025-07-09 140241.png"
+                alt="Sertifikat Python"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6 flex-grow flex flex-col">
+                <h3 class="text-xl font-bold text-primary mb-2">
+                  Programming Essentials in Python
+                </h3>
+                <p class="text-gray-600 mb-4 flex-grow">
+                  Sertifikasi dari Cisco Networking Academy yang mencakup
+                  keahlian dasar hingga menengah dalam pemrograman Python.
+                </p>
+                <a
+                  href="Sertifikat/Partner-_PCAP_-_Programming_Essentials_in_Python_certificate_denipuji028-gmail-com_8eeed6e9-5845-4fe1-a4a4-4c34d84c2016.pdf"
+                  target="_blank"
+                  class="self-start mt-auto bg-primary text-white font-semibold py-2 px-6 rounded-md hover:bg-primary-dark transition-colors"
+                  >Lihat Detail</a
+                >
+              </div>
+            </div>
+            <div
+              class="project-card bg-white rounded-lg shadow-lg overflow-hidden flex flex-col"
+            >
+              <img
+                src="img/Screenshot 2025-07-09 140517.png"
+                alt="Sertifikat MikroTik"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6 flex-grow flex flex-col">
+                <h3 class="text-xl font-bold text-primary mb-2">
+                  MikroTik Certified Network Associate
+                </h3>
+                <p class="text-gray-600 mb-4 flex-grow">
+                  Sertifikasi fundamental untuk mengelola dan mengoperasikan
+                  perangkat jaringan MikroTik.
+                </p>
+                <a
+                  href="Sertifikat/sertifat.pdf"
+                  target="_blank"
+                  class="self-start mt-auto bg-primary text-white font-semibold py-2 px-6 rounded-md hover:bg-primary-dark transition-colors"
+                  >Lihat Detail</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">
+            Hubungi Saya
+          </h2>
+          <p class="mb-8">
+            Tertarik untuk bekerja sama? Jangan ragu untuk menghubungi saya!
+          </p>
+          <a
+            href="https://www.linkedin.com/in/dheny-pujilaksono-73b42020b/"
+            target="_blank"
+            class="inline-block bg-primary text-white font-semibold py-3 px-8 rounded-md hover:bg-primary-dark transition-all duration-300 transform hover:-translate-y-1"
+          >
+            LinkedIn
+          </a>
+        </div>
+      </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 DHENY</p>
+    <footer class="bg-textcolor text-white text-center py-6">
+      <p>&copy; 2025 DHENY</p>
     </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
