@@ -1,14 +1,90 @@
 /*
   File ini digunakan untuk animasi "fade-in" pada kartu proyek dan ikon keahlian
   yang dikontrol oleh script.js. Semua styling lainnya di-handle oleh Tailwind.
+
+  Penyesuaian untuk tampilan yang lebih profesional dan modern.
 */
 
-/* Aturan untuk kondisi awal sebelum animasi */
+/* Variabel CSS untuk konsistensi warna dan shadow */
+:root {
+  --primary-color: #2c3e50; /* Dark Slate Gray */
+  --primary-dark-color: #1f2c3a;
+  --accent-color: #00bfa5; /* Teal */
+  --accent-dark-color: #00a18e;
+  --secondary-color: #7f8c8d; /* Light Grayish Blue */
+  --background-color: #f4f7f6; /* Off-white */
+  --card-bg-color: #ffffff; /* Pure white for cards */
+  --text-dark-color: #34495e; /* Dark text for headings */
+  --text-light-color: #6c7a89; /* Lighter text for paragraphs */
+
+  --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.08);
+  --shadow-hard: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Animasi Fade-in umum */
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-left {
+  animation: fadeInLeft 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-zoom-in {
+  animation: zoomIn 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+/* Delay untuk animasi */
+.delay-300 {
+  animation-delay: 0.3s;
+}
+.delay-600 {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Aturan untuk kondisi awal sebelum animasi scroll */
 .project-card,
 .skill-item {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  transform: translateY(30px); /* Peningkatan sedikit pada translateY */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Durasi transisi lebih panjang */
 }
 
 /* Aturan untuk kondisi akhir setelah elemen terlihat */
@@ -18,13 +94,51 @@
   transform: translateY(0);
 }
 
-/* Efek hover tambahan untuk kartu proyek */
-.project-card {
+/* Efek hover tambahan untuk kartu proyek dan item skill */
+.project-card,
+.skill-item {
   transition-property: transform, box-shadow, opacity;
-  transition-duration: 0.3s, 0.3s, 0.5s;
+  transition-duration: 0.3s; /* Durasi hover lebih cepat */
+  transition-timing-function: ease-in-out;
 }
 
 .project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px) scale(1.01); /* Sedikit membesar saat hover */
+  box-shadow: var(--shadow-hard); /* Shadow lebih menonjol */
+}
+
+.skill-item:hover {
+  transform: translateY(-5px) scale(1.02); /* Sedikit membesar saat hover */
+  box-shadow: var(--shadow-hard); /* Shadow lebih menonjol */
+}
+
+/* Navbar background transition */
+.navbar {
+  background-color: var(--card-bg-color); /* Default sedikit transparan */
+  box-shadow: var(--shadow-light); /* Subtle shadow */
+}
+
+/* Hero section overlay */
+#home::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--primary-color);
+  opacity: 0.7; /* Opasitas overlay */
+  z-index: 0;
+}
+
+#home .relative {
+  z-index: 1; /* Pastikan konten di atas overlay */
+}
+
+/* Skill bar animation */
+.skill-bar {
+  width: 0%; /* Dimulai dari 0% */
+  transition: width 1s ease-out; /* Animasi pengisian bar */
+}
+
+.skill-bar.filled {
+  /* Class ini ditambahkan oleh JavaScript */
+  /* Lebar akan diset sesuai data-progress */
 }

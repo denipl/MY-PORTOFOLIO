@@ -3,77 +3,98 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DHENY | Portofolio</title>
+    <meta
+      name="description"
+      content="Portofolio Dheny Pujilaksono, seorang Web Developer yang bersemangat dengan keahlian di Front-end dan Back-end, termasuk Laravel, Node.js, React, Vue.js, Git, dan MySQL."
+    />
+    <title>DHENY | Portofolio Profesional</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrojS9n5uP2A6o85+2M0/8D9s2l1j0m9fV2U0a0m2FpG5t5d9X7vF8s6/8o0y7B8/9Z/R3aX9u2B3g2w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css" />
 
     <script>
+      // Konfigurasi Tailwind CSS untuk ekstensi tema
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              primary: "#007BFF",
-              "primary-dark": "#0056b3",
-              secondary: "#6c757d",
-              background: "#f8f9fa",
-              textcolor: "#343a40",
+              primary: "#2C3E50", // Dark Slate Gray (Professional, solid base)
+              "primary-dark": "#1F2C3A", // Even darker for footer
+              accent: "#00BFA5", // Teal (Energetic, modern highlight)
+              "accent-dark": "#00A18E",
+              secondary: "#7F8C8D", // Light Grayish Blue (Subtle details)
+              background: "#F4F7F6", // Off-white (Clean background)
+              "card-bg": "#FFFFFF", // Pure white for cards
+              "text-dark": "#34495E", // Dark text for headings
+              "text-light": "#6C7A89", // Lighter text for paragraphs
             },
             fontFamily: {
-              sans: ["Poppins", "sans-serif"],
+              sans: ["Inter", "sans-serif"], // Font modern dan bersih
+            },
+            boxShadow: {
+              light: "0 4px 15px rgba(0, 0, 0, 0.05)",
+              medium: "0 8px 25px rgba(0, 0, 0, 0.08)",
+              hard: "0 12px 35px rgba(0, 0, 0, 0.12)",
             },
           },
         },
       };
     </script>
   </head>
-  <body class="bg-background text-textcolor leading-relaxed">
+  <body class="bg-background text-text-light font-sans leading-relaxed">
     <header>
       <nav
-        class="navbar fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-sm shadow-md transition-colors duration-300"
+        class="navbar fixed top-0 left-0 w-full z-50 bg-card-bg/95 backdrop-blur-md shadow-light transition-all duration-300"
       >
         <div
           class="container mx-auto px-6 flex justify-between items-center py-4"
         >
-          <a href="#home" class="text-2xl font-bold text-primary">DHENY</a>
+          <a href="#home" class="text-3xl font-bold text-primary">DHENY</a>
           <ul class="hidden md:flex space-x-8">
             <li>
               <a
                 href="#about"
-                class="font-medium text-textcolor hover:text-primary transition-colors"
+                class="font-medium text-text-dark hover:text-accent transition-colors duration-200 text-lg"
                 >Tentang</a
               >
             </li>
             <li>
               <a
                 href="#skills"
-                class="font-medium text-textcolor hover:text-primary transition-colors"
+                class="font-medium text-text-dark hover:text-accent transition-colors duration-200 text-lg"
                 >Keahlian</a
               >
             </li>
             <li>
               <a
                 href="#projects"
-                class="font-medium text-textcolor hover:text-primary transition-colors"
+                class="font-medium text-text-dark hover:text-accent transition-colors duration-200 text-lg"
                 >Proyek</a
               >
             </li>
             <li>
               <a
                 href="#sertifikat"
-                class="font-medium text-textcolor hover:text-primary transition-colors"
+                class="font-medium text-text-dark hover:text-accent transition-colors duration-200 text-lg"
                 >Sertifikat</a
               >
             </li>
             <li>
               <a
                 href="#contact"
-                class="font-medium text-textcolor hover:text-primary transition-colors"
+                class="font-medium text-text-dark hover:text-accent transition-colors duration-200 text-lg"
                 >Kontak</a
               >
             </li>
@@ -82,513 +103,550 @@
       </nav>
     </header>
 
-    <main class="pt-20">
+    <main class="pt-24">
       <section
         id="home"
-        class="h-[90vh] bg-cover bg-center bg-no-repeat"
-        style="
-          background-image: linear-gradient(
-              rgba(0, 0, 0, 0.5),
-              rgba(0, 0, 0, 0.5)
-            ),
-            url('img/IMG_9217.jpg');
-        "
+        class="h-[90vh] bg-cover bg-center bg-no-repeat relative flex items-center justify-center after:absolute after:inset-0 after:bg-primary after:opacity-70"
+        style="background-image: url('img/IMG_9217.jpg')"
       >
-        <div
-          class="h-full flex flex-col justify-center items-center text-center text-white px-4"
-        >
-          <h1 class="text-4xl md:text-6xl font-bold mb-2">
+        <div class="relative z-10 text-center text-white px-4">
+          <h1
+            class="text-4xl md:text-6xl font-bold mb-4 leading-tight drop-shadow-lg animate-fade-in-up"
+          >
             Halo, Saya Dheny Pujilaksono
           </h1>
-          <p class="text-lg md:text-2xl font-light">
-            Seorang Web Developer yang bersemangat.
+          <p
+            class="text-lg md:text-2xl font-light mb-8 opacity-0 animate-fade-in-up delay-300"
+          >
+            Seorang Web Developer yang bersemangat dan berdedikasi.
           </p>
           <a
             href="#projects"
-            class="mt-6 inline-block bg-primary text-white font-semibold py-3 px-8 rounded-md hover:bg-primary-dark transition-all duration-300 transform hover:-translate-y-1"
+            class="inline-block bg-accent text-white font-semibold py-3 px-10 rounded-full shadow-medium hover:bg-accent-dark transition-all duration-300 transform hover:-translate-y-1 opacity-0 animate-fade-in-up delay-600"
           >
-            Lihat Karya Saya
+            Lihat Karya Saya <i class="fas fa-arrow-right ml-2"></i>
           </a>
         </div>
       </section>
 
-      <section id="about" class="py-20 bg-white">
-        <div class="container mx-auto px-6 text-center">
-          <h2 class="text-3xl md:text-4xl font-bold text-primary mb-12">
-            Tentang Saya
-          </h2>
-          <div class="flex flex-col md:flex-row items-center gap-10 text-left">
+      <section id="about" class="py-20 bg-card-bg shadow-inner">
+        <div class="container mx-auto px-8 text-center">
+          <h2 class="text-4xl font-bold text-primary mb-12">Tentang Saya</h2>
+          <div
+            class="flex flex-col md:flex-row items-center gap-12 text-left max-w-5xl mx-auto"
+          >
             <img
               src="img/baru.jpg"
               alt="Foto Profil"
-              class="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover border-4 border-primary shadow-lg"
+              class="w-56 h-56 md:w-72 md:h-72 rounded-full object-cover border-4 border-accent shadow-medium flex-shrink-0 animate-zoom-in"
             />
-            <div class="flex-1">
-              <p class="mb-4">
+            <div class="flex-1 animate-fade-in-left">
+              <p class="mb-4 text-lg text-text-light leading-relaxed">
                 Selamat datang di portofolio saya! Saya adalah seorang
-                pengembang web dengan keahlian di bidang front-end dan back-end.
-                Saya suka menciptakan aplikasi web yang fungsional, menarik, dan
-                memberikan pengalaman pengguna yang baik.
+                pengembang web dengan pengalaman dalam membangun aplikasi web
+                yang efisien dan menarik. Saya bersemangat dalam menciptakan
+                solusi digital yang tidak hanya fungsional tetapi juga
+                memberikan pengalaman pengguna yang intuitif dan menyenangkan.
               </p>
-              <p>
-                Keahlian saya meliputi HTML, CSS, JavaScript, Python, PHP serta
-                framework modern seperti React, Node.js dan Laravel ataupun
-                Bahasa pemograman yang lain dan framework yang lain. Saya selalu
-                antusias untuk belajar teknologi baru dan menghadapi tantangan.
+              <p class="text-lg text-text-light leading-relaxed">
+                Keahlian saya mencakup pengembangan front-end dengan HTML, CSS,
+                JavaScript (termasuk React dan Vue.js) serta pengembangan
+                back-end menggunakan PHP (dengan Laravel) dan Node.js. Saya juga
+                familiar dengan Python dan Go, serta menguasai Git untuk version
+                control dan MySQL untuk manajemen basis data. Saya selalu
+                antusias untuk terus belajar teknologi baru dan menghadapi
+                tantangan pengembangan.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="skills" class="py-20">
-        <div class="container mx-auto px-6 text-center">
-          <h2 class="text-3xl md:text-4xl font-bold text-primary mb-16">
-            Keahlian Saya
-          </h2>
+      <section id="skills" class="py-20 bg-background">
+        <div class="container mx-auto px-8 text-center">
+          <h2 class="text-4xl font-bold text-primary mb-16">Keahlian Saya</h2>
 
-          <div class="mb-16">
-            <h3 class="text-2xl font-semibold text-textcolor mb-8">
+          <div class="mb-20">
+            <h3 class="text-3xl font-semibold text-text-dark mb-10">
               Bahasa Pemrograman
             </h3>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <div
+              class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-10 max-w-6xl mx-auto"
+            >
               <div
-                class="skill-item bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+                class="skill-item bg-card-bg p-8 rounded-xl shadow-medium hover:shadow-hard hover:-translate-y-2 transition-all duration-300 flex flex-col items-center justify-center"
+                data-progress="100"
                 style="transition-delay: 100ms"
               >
                 <img
                   src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg"
                   alt="HTML5"
-                  class="h-16 w-16 mx-auto mb-4"
+                  class="h-20 w-20 mx-auto mb-5"
                 />
-                <h4 class="font-bold text-lg mb-2">HTML</h4>
-                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <h4 class="font-bold text-xl mb-3 text-text-dark">HTML</h4>
+                <div class="w-full bg-secondary rounded-full h-3">
                   <div
-                    class="bg-primary h-2.5 rounded-full"
-                    style="width: 95%"
+                    class="skill-bar bg-accent h-3 rounded-full"
+                    style="width: 0%"
                   ></div>
                 </div>
-                <p class="text-sm text-gray-500 mt-2">Mahir</p>
+                <p class="text-base text-text-light mt-3">Mahir</p>
               </div>
               <div
-                class="skill-item bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+                class="skill-item bg-card-bg p-8 rounded-xl shadow-medium hover:shadow-hard hover:-translate-y-2 transition-all duration-300 flex flex-col items-center justify-center"
+                data-progress="100"
                 style="transition-delay: 200ms"
               >
                 <img
                   src="https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg"
                   alt="CSS3"
-                  class="h-16 w-16 mx-auto mb-4"
+                  class="h-20 w-20 mx-auto mb-5"
                 />
-                <h4 class="font-bold text-lg mb-2">CSS</h4>
-                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <h4 class="font-bold text-xl mb-3 text-text-dark">CSS</h4>
+                <div class="w-full bg-secondary rounded-full h-3">
                   <div
-                    class="bg-primary h-2.5 rounded-full"
-                    style="width: 90%"
+                    class="skill-bar bg-accent h-3 rounded-full"
+                    style="width: 0%"
                   ></div>
                 </div>
-                <p class="text-sm text-gray-500 mt-2">Mahir</p>
+                <p class="text-base text-text-light mt-3">Mahir</p>
               </div>
               <div
-                class="skill-item bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+                class="skill-item bg-card-bg p-8 rounded-xl shadow-medium hover:shadow-hard hover:-translate-y-2 transition-all duration-300 flex flex-col items-center justify-center"
+                data-progress="100"
                 style="transition-delay: 300ms"
               >
                 <img
                   src="https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg"
                   alt="JavaScript"
-                  class="h-16 w-16 mx-auto mb-4"
+                  class="h-20 w-20 mx-auto mb-5"
                 />
-                <h4 class="font-bold text-lg mb-2">JavaScript</h4>
-                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <h4 class="font-bold text-xl mb-3 text-text-dark">
+                  JavaScript
+                </h4>
+                <div class="w-full bg-secondary rounded-full h-3">
                   <div
-                    class="bg-primary h-2.5 rounded-full"
-                    style="width: 90%"
+                    class="skill-bar bg-accent h-3 rounded-full"
+                    style="width: 0%"
                   ></div>
                 </div>
-                <p class="text-sm text-gray-500 mt-2">Mahir</p>
+                <p class="text-base text-text-light mt-3">Mahir</p>
               </div>
               <div
-                class="skill-item bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+                class="skill-item bg-card-bg p-8 rounded-xl shadow-medium hover:shadow-hard hover:-translate-y-2 transition-all duration-300 flex flex-col items-center justify-center"
+                data-progress="100"
                 style="transition-delay: 400ms"
               >
                 <img
                   src="https://www.vectorlogo.zone/logos/php/php-icon.svg"
                   alt="PHP"
-                  class="h-16 w-16 mx-auto mb-4"
+                  class="h-20 w-20 mx-auto mb-5"
                 />
-                <h4 class="font-bold text-lg mb-2">PHP</h4>
-                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <h4 class="font-bold text-xl mb-3 text-text-dark">PHP</h4>
+                <div class="w-full bg-secondary rounded-full h-3">
                   <div
-                    class="bg-primary h-2.5 rounded-full"
-                    style="width: 85%"
+                    class="skill-bar bg-accent h-3 rounded-full"
+                    style="width: 0%"
                   ></div>
                 </div>
-                <p class="text-sm text-gray-500 mt-2">Mahir</p>
+                <p class="text-base text-text-light mt-3">Mahir</p>
               </div>
               <div
-                class="skill-item bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+                class="skill-item bg-card-bg p-8 rounded-xl shadow-medium hover:shadow-hard hover:-translate-y-2 transition-all duration-300 flex flex-col items-center justify-center"
+                data-progress="70"
                 style="transition-delay: 500ms"
               >
                 <img
                   src="https://www.vectorlogo.zone/logos/python/python-icon.svg"
                   alt="Python"
-                  class="h-16 w-16 mx-auto mb-4"
+                  class="h-20 w-20 mx-auto mb-5"
                 />
-                <h4 class="font-bold text-lg mb-2">Python</h4>
-                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <h4 class="font-bold text-xl mb-3 text-text-dark">Python</h4>
+                <div class="w-full bg-secondary rounded-full h-3">
                   <div
-                    class="bg-primary h-2.5 rounded-full"
-                    style="width: 70%"
+                    class="skill-bar bg-accent h-3 rounded-full"
+                    style="width: 0%"
                   ></div>
                 </div>
-                <p class="text-sm text-gray-500 mt-2">Menengah</p>
+                <p class="text-base text-text-light mt-3">Menengah</p>
               </div>
               <div
-                class="skill-item bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+                class="skill-item bg-card-bg p-8 rounded-xl shadow-medium hover:shadow-hard hover:-translate-y-2 transition-all duration-300 flex flex-col items-center justify-center"
+                data-progress="70"
                 style="transition-delay: 600ms"
               >
                 <img
                   src="https://www.vectorlogo.zone/logos/golang/golang-icon.svg"
                   alt="Golang"
-                  class="h-16 w-16 mx-auto mb-4"
+                  class="h-20 w-20 mx-auto mb-5"
                 />
-                <h4 class="font-bold text-lg mb-2">Go</h4>
-                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <h4 class="font-bold text-xl mb-3 text-text-dark">Go</h4>
+                <div class="w-full bg-secondary rounded-full h-3">
                   <div
-                    class="bg-primary h-2.5 rounded-full"
-                    style="width: 65%"
+                    class="skill-bar bg-accent h-3 rounded-full"
+                    style="width: 0%"
                   ></div>
                 </div>
-                <p class="text-sm text-gray-500 mt-2">Menengah</p>
+                <p class="text-base text-text-light mt-3">Menengah</p>
               </div>
             </div>
           </div>
 
-          <div class="mb-16">
-            <h3 class="text-2xl font-semibold text-textcolor mb-8">
+          <div class="mb-20">
+            <h3 class="text-3xl font-semibold text-text-dark mb-10">
               Framework & Teknologi
             </h3>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+            <div
+              class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10 max-w-6xl mx-auto"
+            >
               <div
-                class="skill-item bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+                class="skill-item bg-card-bg p-8 rounded-xl shadow-medium hover:shadow-hard hover:-translate-y-2 transition-all duration-300 flex flex-col items-center justify-center"
+                data-progress="90"
                 style="transition-delay: 100ms"
               >
                 <img
                   src="https://www.vectorlogo.zone/logos/laravel/laravel-icon.svg"
                   alt="Laravel"
-                  class="h-16 w-16 mx-auto mb-4"
+                  class="h-20 w-20 mx-auto mb-5"
                 />
-                <h4 class="font-bold text-lg mb-2">Laravel</h4>
-                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <h4 class="font-bold text-xl mb-3 text-text-dark">Laravel</h4>
+                <div class="w-full bg-secondary rounded-full h-3">
                   <div
-                    class="bg-primary h-2.5 rounded-full"
-                    style="width: 90%"
+                    class="skill-bar bg-accent h-3 rounded-full"
+                    style="width: 0%"
                   ></div>
                 </div>
-                <p class="text-sm text-gray-500 mt-2">Cukup Mahir</p>
+                <p class="text-base text-text-light mt-3">Cukup Mahir</p>
               </div>
               <div
-                class="skill-item bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+                class="skill-item bg-card-bg p-8 rounded-xl shadow-medium hover:shadow-hard hover:-translate-y-2 transition-all duration-300 flex flex-col items-center justify-center"
+                data-progress="75"
                 style="transition-delay: 200ms"
               >
                 <img
                   src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg"
                   alt="Node.js"
-                  class="h-16 w-16 mx-auto mb-4"
+                  class="h-20 w-20 mx-auto mb-5"
                 />
-                <h4 class="font-bold text-lg mb-2">Node.js</h4>
-                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <h4 class="font-bold text-xl mb-3 text-text-dark">Node.js</h4>
+                <div class="w-full bg-secondary rounded-full h-3">
                   <div
-                    class="bg-primary h-2.5 rounded-full"
-                    style="width: 75%"
+                    class="skill-bar bg-accent h-3 rounded-full"
+                    style="width: 0%"
                   ></div>
                 </div>
-                <p class="text-sm text-gray-500 mt-2">Menengah</p>
+                <p class="text-base text-text-light mt-3">Menengah</p>
               </div>
               <div
-                class="skill-item bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+                class="skill-item bg-card-bg p-8 rounded-xl shadow-medium hover:shadow-hard hover:-translate-y-2 transition-all duration-300 flex flex-col items-center justify-center"
+                data-progress="65"
                 style="transition-delay: 300ms"
               >
                 <img
                   src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg"
                   alt="React"
-                  class="h-16 w-16 mx-auto mb-4"
+                  class="h-20 w-20 mx-auto mb-5"
                 />
-                <h4 class="font-bold text-lg mb-2">React</h4>
-                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <h4 class="font-bold text-xl mb-3 text-text-dark">React</h4>
+                <div class="w-full bg-secondary rounded-full h-3">
                   <div
-                    class="bg-primary h-2.5 rounded-full"
-                    style="width: 65%"
+                    class="skill-bar bg-accent h-3 rounded-full"
+                    style="width: 0%"
                   ></div>
                 </div>
-                <p class="text-sm text-gray-500 mt-2">Menengah</p>
+                <p class="text-base text-text-light mt-3">Menengah</p>
               </div>
               <div
-                class="skill-item bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+                class="skill-item bg-card-bg p-8 rounded-xl shadow-medium hover:shadow-hard hover:-translate-y-2 transition-all duration-300 flex flex-col items-center justify-center"
+                data-progress="90"
                 style="transition-delay: 400ms"
               >
                 <img
                   src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
                   alt="Git"
-                  class="h-16 w-16 mx-auto mb-4"
+                  class="h-20 w-20 mx-auto mb-5"
                 />
-                <h4 class="font-bold text-lg mb-2">Git</h4>
-                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <h4 class="font-bold text-xl mb-3 text-text-dark">Git</h4>
+                <div class="w-full bg-secondary rounded-full h-3">
                   <div
-                    class="bg-primary h-2.5 rounded-full"
-                    style="width: 95%"
+                    class="skill-bar bg-accent h-3 rounded-full"
+                    style="width: 0%"
                   ></div>
                 </div>
-                <p class="text-sm text-gray-500 mt-2">Cukup Mahir</p>
+                <p class="text-base text-text-light mt-3">Cukup Mahir</p>
               </div>
               <div
-                class="skill-item bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+                class="skill-item bg-card-bg p-8 rounded-xl shadow-medium hover:shadow-hard hover:-translate-y-2 transition-all duration-300 flex flex-col items-center justify-center"
+                data-progress="45"
                 style="transition-delay: 500ms"
               >
                 <img
                   src="https://www.vectorlogo.zone/logos/vuejs/vuejs-icon.svg"
                   alt="Vue.js"
-                  class="h-16 w-16 mx-auto mb-4"
+                  class="h-20 w-20 mx-auto mb-5"
                 />
-                <h4 class="font-bold text-lg mb-2">Vue.js</h4>
-                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <h4 class="font-bold text-xl mb-3 text-text-dark">Vue.js</h4>
+                <div class="w-full bg-secondary rounded-full h-3">
                   <div
-                    class="bg-primary h-2.5 rounded-full"
-                    style="width: 45%"
+                    class="skill-bar bg-accent h-3 rounded-full"
+                    style="width: 0%"
                   ></div>
                 </div>
-                <p class="text-sm text-gray-500 mt-2">Dasar</p>
+                <p class="text-base text-text-light mt-3">Dasar</p>
               </div>
             </div>
           </div>
 
           <div>
-            <h3 class="text-2xl font-semibold text-textcolor mb-8">Database</h3>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+            <h3 class="text-3xl font-semibold text-text-dark mb-10">
+              Database
+            </h3>
+            <div
+              class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10 max-w-6xl mx-auto"
+            >
               <div
-                class="skill-item bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+                class="skill-item bg-card-bg p-8 rounded-xl shadow-medium hover:shadow-hard hover:-translate-y-2 transition-all duration-300 flex flex-col items-center justify-center"
+                data-progress="90"
                 style="transition-delay: 100ms"
               >
                 <img
                   src="https://www.vectorlogo.zone/logos/mysql/mysql-icon.svg"
                   alt="MySQL"
-                  class="h-16 w-16 mx-auto mb-4"
+                  class="h-20 w-20 mx-auto mb-5"
                 />
-                <h4 class="font-bold text-lg mb-2">MySQL</h4>
-                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <h4 class="font-bold text-xl mb-3 text-text-dark">MySQL</h4>
+                <div class="w-full bg-secondary rounded-full h-3">
                   <div
-                    class="bg-primary h-2.5 rounded-full"
-                    style="width: 95%"
+                    class="skill-bar bg-accent h-3 rounded-full"
+                    style="width: 0%"
                   ></div>
                 </div>
-                <p class="text-sm text-gray-500 mt-2">Cukup Mahir</p>
+                <p class="text-base text-text-light mt-3">Cukup Mahir</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="projects" class="py-20 bg-white">
-        <div class="container mx-auto px-6 text-center">
-          <h2 class="text-3xl md:text-4xl font-bold text-primary mb-12">
-            Proyek Saya
-          </h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section id="projects" class="py-20 bg-card-bg">
+        <div class="container mx-auto px-8 text-center">
+          <h2 class="text-4xl font-bold text-primary mb-12">Proyek Pilihan</h2>
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto"
+          >
             <div
-              class="project-card bg-white rounded-lg shadow-lg overflow-hidden flex flex-col"
+              class="project-card bg-card-bg rounded-lg shadow-medium overflow-hidden flex flex-col border border-gray-100"
             >
               <img
                 src="img/Screenshot 2025-07-01 135004.png"
                 alt="Booking Web"
-                class="w-full h-48 object-cover"
+                class="w-full h-56 object-cover object-top"
               />
               <div class="p-6 flex-grow flex flex-col">
-                <h3 class="text-xl font-bold text-primary mb-2">Booking Web</h3>
-                <p class="text-gray-600 mb-4 flex-grow">
-                  Web manajemen jadwal dan booking lapangan dibangun dengan
-                  Laravel.
+                <h3 class="text-2xl font-bold text-primary mb-2">
+                  Booking Web Lapangan
+                </h3>
+                <p class="text-text-light mb-4 flex-grow text-lg">
+                  Sistem manajemen jadwal dan booking lapangan yang dikembangkan
+                  dengan Laravel, dilengkapi dengan antarmuka yang intuitif.
                 </p>
                 <a
                   href="https://github.com/Zivalez/sistem-booking-lapangan.git"
                   target="_blank"
-                  class="self-start mt-auto bg-primary text-white font-semibold py-2 px-6 rounded-md hover:bg-primary-dark transition-colors"
-                  >Lihat Proyek</a
-                >
+                  rel="noopener noreferrer"
+                  class="self-start mt-auto bg-primary text-white font-semibold py-3 px-8 rounded-full hover:bg-primary-dark transition-colors duration-200 text-lg"
+                  >Lihat Proyek <i class="fas fa-external-link-alt ml-2"></i
+                ></a>
               </div>
             </div>
             <div
-              class="project-card bg-white rounded-lg shadow-lg overflow-hidden flex flex-col"
+              class="project-card bg-card-bg rounded-lg shadow-medium overflow-hidden flex flex-col border border-gray-100"
             >
               <img
                 src="img/Screenshot 2025-07-06 131359.png"
                 alt="Dashboard Admin"
-                class="w-full h-48 object-cover"
+                class="w-full h-56 object-cover object-top"
               />
               <div class="p-6 flex-grow flex flex-col">
-                <h3 class="text-xl font-bold text-primary mb-2">
-                  Dasboard Admin
+                <h3 class="text-2xl font-bold text-primary mb-2">
+                  Dashboard Admin Sederhana
                 </h3>
-                <p class="text-gray-600 mb-4 flex-grow">
-                  Dashboard admin sederhana berbasis Laravel untuk manajemen
-                  konten.
+                <p class="text-text-light mb-4 flex-grow text-lg">
+                  Dashboard admin berbasis Laravel untuk manajemen konten,
+                  dirancang untuk kemudahan penggunaan dan efisiensi.
                 </p>
                 <a
                   href="https://github.com/denipl/LARAVEL-DASHBOARD-ADMIN-SIMPEL.git"
                   target="_blank"
-                  class="self-start mt-auto bg-primary text-white font-semibold py-2 px-6 rounded-md hover:bg-primary-dark transition-colors"
-                  >Lihat Proyek</a
-                >
+                  rel="noopener noreferrer"
+                  class="self-start mt-auto bg-primary text-white font-semibold py-3 px-8 rounded-full hover:bg-primary-dark transition-colors duration-200 text-lg"
+                  >Lihat Proyek <i class="fas fa-external-link-alt ml-2"></i
+                ></a>
               </div>
             </div>
             <div
-              class="project-card bg-white rounded-lg shadow-lg overflow-hidden flex flex-col"
+              class="project-card bg-card-bg rounded-lg shadow-medium overflow-hidden flex flex-col border border-gray-100"
             >
               <img
                 src="img/python-logo-master-v3-TM.png"
                 alt="Aplikasi Image Noise"
-                class="w-full h-48 object-contain p-4"
+                class="w-full h-56 object-contain p-6"
               />
               <div class="p-6 flex-grow flex flex-col">
-                <h3 class="text-xl font-bold text-primary mb-2">
-                  Aplikasi Image Noise
+                <h3 class="text-2xl font-bold text-primary mb-2">
+                  Aplikasi Manipulasi Gambar
                 </h3>
-                <p class="text-gray-600 mb-4 flex-grow">
-                  Skrip Python untuk manipulasi gambar, menambahkan noise dan
-                  filtering.
+                <p class="text-text-light mb-4 flex-grow text-lg">
+                  Skrip Python untuk manipulasi gambar, termasuk penambahan
+                  noise dan penerapan filter untuk pengolahan citra.
                 </p>
                 <a
                   href="https://github.com/denipl/APLIKASI-IMAGE-NOICE.git"
                   target="_blank"
-                  class="self-start mt-auto bg-primary text-white font-semibold py-2 px-6 rounded-md hover:bg-primary-dark transition-colors"
-                  >Lihat Proyek</a
-                >
+                  rel="noopener noreferrer"
+                  class="self-start mt-auto bg-primary text-white font-semibold py-3 px-8 rounded-full hover:bg-primary-dark transition-colors duration-200 text-lg"
+                  >Lihat Proyek <i class="fas fa-external-link-alt ml-2"></i
+                ></a>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="sertifikat" class="py-20">
-        <div class="container mx-auto px-6 text-center">
-          <h2 class="text-3xl md:text-4xl font-bold text-primary mb-12">
+      <section id="sertifikat" class="py-20 bg-background">
+        <div class="container mx-auto px-8 text-center">
+          <h2 class="text-4xl font-bold text-primary mb-12">
             Sertifikat Kompetensi
           </h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 max-w-4xl mx-auto"
+          >
             <div
-              class="project-card bg-white rounded-lg shadow-lg overflow-hidden flex flex-col"
+              class="project-card bg-card-bg rounded-lg shadow-medium overflow-hidden flex flex-col border border-gray-100"
             >
               <img
                 src="img/Screenshot 2025-07-09 140038.png"
                 alt="Sertifikat Cloud & AI"
-                class="w-full h-48 object-cover"
+                class="w-full h-64 object-cover object-top"
               />
               <div class="p-6 flex-grow flex flex-col">
                 <h3 class="text-xl font-bold text-primary mb-2">
-                  Introduction to Cloud and Artificial Intelligence
+                  Introduction to Cloud and AI
                 </h3>
-                <p class="text-gray-600 mb-4 flex-grow">
-                  Pelatihan dari Digital Entrepreneurship Academy (DEA).
+                <p class="text-text-light mb-4 flex-grow text-lg">
+                  Pelatihan komprehensif dari Digital Entrepreneurship Academy
+                  (DEA) mengenai aplikasi Cloud dan AI dalam bisnis digital.
                 </p>
                 <a
                   href="Sertifikat/Sertifikat_DHENY PUJI LAKSONO_Introduction to Cloud and Artificial Intelligence Applications for Digital Business.pdf"
                   target="_blank"
-                  class="self-start mt-auto bg-primary text-white font-semibold py-2 px-6 rounded-md hover:bg-primary-dark transition-colors"
-                  >Lihat Detail</a
-                >
+                  rel="noopener noreferrer"
+                  class="self-start mt-auto bg-accent text-white font-semibold py-3 px-8 rounded-full hover:bg-accent-dark transition-colors duration-200 text-lg"
+                  >Lihat Detail <i class="fas fa-file-pdf ml-2"></i
+                ></a>
               </div>
             </div>
             <div
-              class="project-card bg-white rounded-lg shadow-lg overflow-hidden flex flex-col"
+              class="project-card bg-card-bg rounded-lg shadow-medium overflow-hidden flex flex-col border border-gray-100"
             >
               <img
                 src="img/Screenshot 2025-07-09 140201.png"
                 alt="Sertifikat Microcredential"
-                class="w-full h-48 object-cover"
+                class="w-full h-64 object-cover object-top"
               />
               <div class="p-6 flex-grow flex flex-col">
                 <h3 class="text-xl font-bold text-primary mb-2">
                   Digital Talent Scholarship, Microcredential
                 </h3>
-                <p class="text-gray-600 mb-4 flex-grow">
-                  Sertifikasi dari Puslitbang SDP3I.
+                <p class="text-text-light mb-4 flex-grow text-lg">
+                  Sertifikasi dari Puslitbang SDP3I, menandakan kelulusan
+                  program Microcredential Startup Foundation.
                 </p>
                 <a
                   href="Sertifikat/DHENY PUJI LAKSONO - 1969555850-299 (2).pdf"
                   target="_blank"
-                  class="self-start mt-auto bg-primary text-white font-semibold py-2 px-6 rounded-md hover:bg-primary-dark transition-colors"
-                  >Lihat Detail</a
-                >
+                  rel="noopener noreferrer"
+                  class="self-start mt-auto bg-accent text-white font-semibold py-3 px-8 rounded-full hover:bg-accent-dark transition-colors duration-200 text-lg"
+                  >Lihat Detail <i class="fas fa-file-pdf ml-2"></i
+                ></a>
               </div>
             </div>
             <div
-              class="project-card bg-white rounded-lg shadow-lg overflow-hidden flex flex-col"
+              class="project-card bg-card-bg rounded-lg shadow-medium overflow-hidden flex flex-col border border-gray-100"
             >
               <img
                 src="img/Screenshot 2025-07-09 140241.png"
                 alt="Sertifikat Python"
-                class="w-full h-48 object-cover"
+                class="w-full h-64 object-cover object-top"
               />
               <div class="p-6 flex-grow flex flex-col">
                 <h3 class="text-xl font-bold text-primary mb-2">
                   Programming Essentials in Python
                 </h3>
-                <p class="text-gray-600 mb-4 flex-grow">
-                  Sertifikasi dari Cisco Networking Academy.
+                <p class="text-text-light mb-4 flex-grow text-lg">
+                  Sertifikasi dari Cisco Networking Academy, mengkonfirmasi
+                  kompetensi dalam dasar-dasar pemrograman Python.
                 </p>
                 <a
                   href="Sertifikat/Partner-_PCAP_-_Programming_Essentials_in_Python_certificate_denipuji028-gmail-com_8eeed6e9-5845-4fe1-a4a4-4c34d84c2016.pdf"
                   target="_blank"
-                  class="self-start mt-auto bg-primary text-white font-semibold py-2 px-6 rounded-md hover:bg-primary-dark transition-colors"
-                  >Lihat Detail</a
-                >
+                  rel="noopener noreferrer"
+                  class="self-start mt-auto bg-accent text-white font-semibold py-3 px-8 rounded-full hover:bg-accent-dark transition-colors duration-200 text-lg"
+                  >Lihat Detail <i class="fas fa-file-pdf ml-2"></i
+                ></a>
               </div>
             </div>
             <div
-              class="project-card bg-white rounded-lg shadow-lg overflow-hidden flex flex-col"
+              class="project-card bg-card-bg rounded-lg shadow-medium overflow-hidden flex flex-col border border-gray-100"
             >
               <img
                 src="img/Screenshot 2025-07-09 140517.png"
                 alt="Sertifikat MikroTik"
-                class="w-full h-48 object-cover"
+                class="w-full h-64 object-cover object-top"
               />
               <div class="p-6 flex-grow flex flex-col">
                 <h3 class="text-xl font-bold text-primary mb-2">
                   MikroTik Certified Network Associate
                 </h3>
-                <p class="text-gray-600 mb-4 flex-grow">
-                  Sertifikasi fundamental dari MikroTik.
+                <p class="text-text-light mb-4 flex-grow text-lg">
+                  Sertifikasi fundamental dari MikroTik, menunjukkan pemahaman
+                  tentang jaringan dan konfigurasi perangkat MikroTik.
                 </p>
                 <a
                   href="Sertifikat/sertifat.pdf"
                   target="_blank"
-                  class="self-start mt-auto bg-primary text-white font-semibold py-2 px-6 rounded-md hover:bg-primary-dark transition-colors"
-                  >Lihat Detail</a
-                >
+                  rel="noopener noreferrer"
+                  class="self-start mt-auto bg-accent text-white font-semibold py-3 px-8 rounded-full hover:bg-accent-dark transition-colors duration-200 text-lg"
+                  >Lihat Detail <i class="fas fa-file-pdf ml-2"></i
+                ></a>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="contact" class="py-20 bg-white">
-        <div class="container mx-auto px-6 text-center">
-          <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">
-            Hubungi Saya
-          </h2>
-          <p class="mb-8">
-            Tertarik untuk bekerja sama? Jangan ragu untuk menghubungi saya!
+      <section id="contact" class="py-20 bg-card-bg">
+        <div class="container mx-auto px-8 text-center max-w-2xl">
+          <h2 class="text-4xl font-bold text-primary mb-6">Hubungi Saya</h2>
+          <p class="mb-10 text-lg text-text-light leading-relaxed">
+            Tertarik untuk berkolaborasi dalam proyek menarik atau memiliki
+            pertanyaan? Jangan ragu untuk menghubungi saya melalui LinkedIn!
           </p>
           <a
             href="https://www.linkedin.com/in/dheny-pujilaksono-73b42020b/"
-            class="inline-block bg-primary text-white font-semibold py-3 px-8 rounded-md hover:bg-primary-dark transition-all duration-300 transform hover:-translate-y-1"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block bg-primary text-white font-semibold py-3 px-10 rounded-full shadow-medium hover:bg-primary-dark transition-all duration-300 transform hover:-translate-y-1"
+            aria-label="Profil LinkedIn Dheny Pujilaksono"
           >
-            linkedin
+            <i class="fab fa-linkedin-in mr-3"></i> LinkedIn
           </a>
         </div>
       </section>
     </main>
 
-    <footer class="bg-textcolor text-white text-center py-6">
-      <p>&copy; 2025 DHENY</p>
+    <footer class="bg-primary-dark text-white text-center py-6">
+      <p class="text-lg opacity-80">&copy; 2025 DHENY. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
