@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const observerOptions = {
     root: null,
     rootMargin: "0px",
-    threshold: 0.1, // Element terlihat setidaknya 10%
+    threshold: 0.1,
     threshold: 0.1,
   };
 
