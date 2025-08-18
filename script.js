@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Memilih semua elemen yang ingin dianimasikan saat scroll
   const animatedElements = document.querySelectorAll(
     ".project-card, .skill-item, .animate-fade-in-up, .animate-fade-in-left, .animate-zoom-in"
   );
@@ -8,29 +7,28 @@ document.addEventListener("DOMContentLoaded", function () {
     root: null,
     rootMargin: "0px",
     threshold: 0.1, // Element terlihat setidaknya 10%
+    threshold: 0.1,
   };
 
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add("visible"); // Untuk project-card dan skill-item
-        entry.target.classList.remove("opacity-0"); // Untuk elemen yang animate-fade-in-up dll.
+        entry.target.classList.add("visible");
+        entry.target.classList.remove("opacity-0");
 
-        // Animasi skill bar
         if (entry.target.classList.contains("skill-item")) {
           const skillBar = entry.target.querySelector(".skill-bar");
-          const progress = entry.target.dataset.progress; // Ambil nilai progress dari data-progress
+          const progress = entry.target.dataset.progress;
           if (skillBar && progress) {
             skillBar.style.width = progress + "%";
-            skillBar.classList.add("filled"); // Tambahkan class untuk menandai sudah diisi
+            skillBar.classList.add("filled");
           }
         }
-        observer.unobserve(entry.target); // Hentikan observasi setelah terlihat
+        observer.unobserve(entry.target);
       }
     });
   }, observerOptions);
 
-  // Menerapkan observer pada setiap elemen yang dipilih
   animatedElements.forEach((el) => {
     observer.observe(el);
   });
@@ -40,12 +38,12 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", () => {
     if (window.scrollY > 50) {
       navbar.classList.add("scrolled");
-      navbar.style.backgroundColor = "rgba(255, 255, 255, 0.98)"; // Lebih solid saat scroll
-      navbar.style.boxShadow = "var(--shadow-medium)"; // Shadow lebih terlihat
+      navbar.style.backgroundColor = "rgba(255, 255, 255, 0.98)";
+      navbar.style.boxShadow = "var(--shadow-medium)";
     } else {
       navbar.classList.remove("scrolled");
-      navbar.style.backgroundColor = "var(--card-bg-color)"; // Kembali ke default
-      navbar.style.boxShadow = "var(--shadow-light)"; // Shadow default
+      navbar.style.backgroundColor = "var(--card-bg-color)";
+      navbar.style.boxShadow = "var(--shadow-light)";
     }
   });
 });

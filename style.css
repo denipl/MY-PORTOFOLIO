@@ -1,28 +1,19 @@
-/*
-  File ini digunakan untuk animasi "fade-in" pada kartu proyek dan ikon keahlian
-  yang dikontrol oleh script.js. Semua styling lainnya di-handle oleh Tailwind.
-
-  Penyesuaian untuk tampilan yang lebih profesional dan modern.
-*/
-
-/* Variabel CSS untuk konsistensi warna dan shadow */
 :root {
-  --primary-color: #2c3e50; /* Dark Slate Gray */
+  --primary-color: #2c3e50;
   --primary-dark-color: #1f2c3a;
-  --accent-color: #00bfa5; /* Teal */
+  --accent-color: #00bfa5;
   --accent-dark-color: #00a18e;
-  --secondary-color: #7f8c8d; /* Light Grayish Blue */
-  --background-color: #f4f7f6; /* Off-white */
-  --card-bg-color: #ffffff; /* Pure white for cards */
-  --text-dark-color: #34495e; /* Dark text for headings */
-  --text-light-color: #6c7a89; /* Lighter text for paragraphs */
+  --secondary-color: #7f8c8d;
+  --background-color: #f4f7f6;
+  --card-bg-color: #ffffff;
+  --text-dark-color: #34495e;
+  --text-light-color: #6c7a89;
 
   --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.05);
   --shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.08);
   --shadow-hard: 0 12px 35px rgba(0, 0, 0, 0.12);
 }
 
-/* Animasi Fade-in umum */
 .animate-fade-in-up {
   animation: fadeInUp 0.8s ease-out forwards;
   opacity: 0;
@@ -38,7 +29,6 @@
   opacity: 0;
 }
 
-/* Delay untuk animasi */
 .delay-300 {
   animation-delay: 0.3s;
 }
@@ -79,7 +69,6 @@
   }
 }
 
-/* Aturan untuk kondisi awal sebelum animasi scroll */
 .project-card,
 .skill-item {
   opacity: 0;
@@ -87,14 +76,12 @@
   transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Durasi transisi lebih panjang */
 }
 
-/* Aturan untuk kondisi akhir setelah elemen terlihat */
 .project-card.visible,
 .skill-item.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Efek hover tambahan untuk kartu proyek dan item skill */
 .project-card,
 .skill-item {
   transition-property: transform, box-shadow, opacity;
@@ -112,13 +99,11 @@
   box-shadow: var(--shadow-hard); /* Shadow lebih menonjol */
 }
 
-/* Navbar background transition */
 .navbar {
   background-color: var(--card-bg-color); /* Default sedikit transparan */
   box-shadow: var(--shadow-light); /* Subtle shadow */
 }
 
-/* Hero section overlay */
 #home::after {
   content: "";
   position: absolute;
@@ -132,7 +117,6 @@
   z-index: 1; /* Pastikan konten di atas overlay */
 }
 
-/* Skill bar animation */
 .skill-bar {
   width: 0%; /* Dimulai dari 0% */
   transition: width 1s ease-out; /* Animasi pengisian bar */

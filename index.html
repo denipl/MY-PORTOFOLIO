@@ -25,23 +25,22 @@
     <link rel="stylesheet" href="style.css" />
 
     <script>
-      // Konfigurasi Tailwind CSS untuk ekstensi tema
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              primary: "#2C3E50", // Dark Slate Gray (Professional, solid base)
-              "primary-dark": "#1F2C3A", // Even darker for footer
-              accent: "#00BFA5", // Teal (Energetic, modern highlight)
+              primary: "#2C3E50",
+              "primary-dark": "#1F2C3A",
+              accent: "#00BFA5",
               "accent-dark": "#00A18E",
-              secondary: "#7F8C8D", // Light Grayish Blue (Subtle details)
-              background: "#F4F7F6", // Off-white (Clean background)
-              "card-bg": "#FFFFFF", // Pure white for cards
-              "text-dark": "#34495E", // Dark text for headings
-              "text-light": "#6C7A89", // Lighter text for paragraphs
+              secondary: "#7F8C8D",
+              background: "#F4F7F6",
+              "card-bg": "#FFFFFF",
+              "text-dark": "#34495E",
+              "text-light": "#6C7A89",
             },
             fontFamily: {
-              sans: ["Inter", "sans-serif"], // Font modern dan bersih
+              sans: ["Inter", "sans-serif"],
             },
             boxShadow: {
               light: "0 4px 15px rgba(0, 0, 0, 0.05)",
@@ -111,14 +110,13 @@
       >
         <div class="relative z-10 text-center text-white px-4">
           <h1
-            class="text-4xl md:text-6xl font-bold mb-4 leading-tight drop-shadow-lg animate-fade-in-up"
-          >
-            Hello, i'M Dheny Pujilaksono
-          </h1>
+            class="text-4xl md:text-6xl font-bold mb-4 leading-tight drop-shadow-lg typing-effect"
+            id="typing-title"
+          ></h1>
           <p
             class="text-lg md:text-2xl font-light mb-8 opacity-0 animate-fade-in-up delay-300"
           >
-            Software Engineer | Web Developer
+            Software Engineer | Full Stack Developer
           </p>
           <a
             href="#projects"
@@ -231,6 +229,27 @@
                   ></div>
                 </div>
                 <p class="text-base text-text-light mt-3">Proficient</p>
+              </div>
+              <div
+                class="skill-item bg-card-bg p-8 rounded-xl shadow-medium hover:shadow-hard hover:-translate-y-2 transition-all duration-300 flex flex-col items-center justify-center"
+                data-progress="80"
+                style="transition-delay: 350ms"
+              >
+                <img
+                  src="https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg"
+                  alt="TypeScript"
+                  class="h-20 w-20 mx-auto mb-5"
+                />
+                <h4 class="font-bold text-xl mb-3 text-text-dark">
+                  TypeScript
+                </h4>
+                <div class="w-full bg-secondary rounded-full h-3">
+                  <div
+                    class="skill-bar bg-accent h-3 rounded-full"
+                    style="width: 0%"
+                  ></div>
+                </div>
+                <p class="text-base text-text-light mt-3">Intermediate</p>
               </div>
               <div
                 class="skill-item bg-card-bg p-8 rounded-xl shadow-medium hover:shadow-hard hover:-translate-y-2 transition-all duration-300 flex flex-col items-center justify-center"
@@ -486,6 +505,31 @@
               class="project-card bg-card-bg rounded-lg shadow-medium overflow-hidden flex flex-col border border-gray-100"
             >
               <img
+                src="img/react.png"
+                alt="golang"
+                class="w-full h-56 object-contain p-6"
+              />
+              <div class="p-6 flex-grow flex flex-col">
+                <h3 class="text-2xl font-bold text-primary mb-2">
+                  Frontend Contact Storage Application
+                </h3>
+                <p class="text-text-light mb-4 flex-grow text-lg">
+                  A simple web app to store, update, and delete contact data
+                  (name and phone number). Built with React and Vite
+                </p>
+                <a
+                  href="https://github.com/denipl/Aplikasi-Penyimpanan-NO.TLP.git"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="self-start mt-auto bg-primary text-white font-semibold py-3 px-8 rounded-full hover:bg-primary-dark transition-colors duration-200 text-lg"
+                  >View Projects <i class="fas fa-external-link-alt ml-2"></i
+                ></a>
+              </div>
+            </div>
+            <div
+              class="project-card bg-card-bg rounded-lg shadow-medium overflow-hidden flex flex-col border border-gray-100"
+            >
+              <img
                 src="img/go.png"
                 alt="golang"
                 class="w-full h-56 object-contain p-6"
@@ -676,5 +720,41 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+      // Efek mengetik untuk judul
+      const text = "Hello, i'M Dheny Pujilaksono";
+      const target = document.getElementById("typing-title");
+      let i = 0;
+      function typeWriter() {
+        if (i <= text.length) {
+          target.innerHTML =
+            text.substring(0, i) + '<span class="blinking-cursor">|</span>';
+          i++;
+          setTimeout(typeWriter, 80);
+        } else {
+          target.innerHTML = text;
+        }
+      }
+      typeWriter();
+    </script>
+    <style>
+      .typing-effect {
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 0.15em solid #00bfa5;
+      }
+      .blinking-cursor {
+        animation: blink 0.7s steps(1) infinite;
+      }
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+      }
+    </style>
   </body>
 </html>
