@@ -107,6 +107,59 @@ document.querySelectorAll(".nav-list li a").forEach((link) => {
   });
 });
 
+/* --- PART 3: IMAGE MODAL GALLERY --- */
+
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImg");
+const images = document.querySelectorAll(".img-baru");
+const closeBtn = document.querySelector(".close");
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
+
+let currentIndex = 0;
+const imageArray = Array.from(images);
+
+imageArray.forEach((img, index) => {
+  img.addEventListener("click", () => {
+    modal.style.display = "block";
+    modalImg.src = img.src;
+    currentIndex = index;
+  });
+});
+
+function closeModal() {
+  modal.style.display = "none";
+}
+
+if (closeBtn) closeBtn.addEventListener("click", closeModal);
+
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    closeModal();
+  }
+});
+
+function showNext() {
+  currentIndex = (currentIndex + 1) % imageArray.length;
+  modalImg.src = imageArray[currentIndex].src;
+}
+
+function showPrev() {
+  currentIndex = (currentIndex - 1 + imageArray.length) % imageArray.length;
+  modalImg.src = imageArray[currentIndex].src;
+}
+
+if (nextBtn) nextBtn.addEventListener("click", showNext);
+if (prevBtn) prevBtn.addEventListener("click", showPrev);
+
+document.addEventListener("keydown", (e) => {
+  if (modal.style.display === "block") {
+    if (e.key === "ArrowRight") showNext();
+    if (e.key === "ArrowLeft") showPrev();
+    if (e.key === "Escape") closeModal();
+  }
+});
+
 // Jalankan Fungsi Awal
 resize();
 initParticles();
